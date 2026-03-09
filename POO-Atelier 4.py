@@ -22,6 +22,9 @@ class Voiture:
         self.marque = marque
         self.kilometrage = kilometrage
         self.chauffeur = None
-
     def afficherInformations(self):
         return (self.matricule, self.annee, self.marque, self.kilometrage, self.chauffeur)
+e1 = Employe("I270520", "Idir", "Nassim")
+e2 = Employe("B120399", "bousekin", "noureddine")
+v1 = Voiture("AA123BB", 2025, "Mazda", 11000)
+v2 = Voiture("CC456DD", 2025, "Honda", 8000)
