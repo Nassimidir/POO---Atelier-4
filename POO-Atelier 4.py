@@ -8,12 +8,12 @@ class Employe:
     def afficherInformations(self):
         return (self.numeroPermis, self.nom, self.prenom, self.voitureService)
     def affecterVoiture(self, voiture):
-        if self.voitureService is None and voiture.employe is None:
+        if self.voitureService is None and voiture.chauffeur is None:
             self.voitureService = voiture
-            voiture.employe = self
+            voiture.chauffeur = self
     def retirerVoiture(self):
         if self.voitureService is not None:
-            self.voitureService.employe = None
+            self.voitureService.chauffeur = None
             self.voitureService = None
 class Voiture:
     def __init__(self, matricule, annee, marque, kilometrage):
@@ -37,4 +37,5 @@ v2.afficherInformations()
 e1.retirerVoiture()
 info_e1_apres_retrait = e1.afficherInformations()
 info_v1_apres_retrait = v1.afficherInformations()
-
+e1.affecterVoiture(v1)
+e2.affecterVoiture(v1)
